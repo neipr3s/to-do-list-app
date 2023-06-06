@@ -12,6 +12,8 @@ function newItem() {
     $('#list').append(li);
   }
 
+
+
   //Crossing an item out:
   function crossOut() {
     li.toggleClass("strike");
@@ -20,6 +22,7 @@ function newItem() {
 li.on("click", function crossOut() {
     li.toggleClass("strike");
 });
+
 
 // Adding a delete button
 let crossOutButton = $('<crossOutButton></crossOutButton>');
@@ -33,4 +36,16 @@ li.append(crossOutButton);
 // Making list sortable
 $('#list').sortable();
 
+  //enable enter key to push input to list
+
+//   $(document).ready(function() {
+//     // Enable enter key to push input to list
+//     $("#input").keyup(function(event) {
+//       if (event.keyCode === 13) {
+//         newItem();
+//         $("#input").val(''); // Clear the input box after adding an item
+//       }
+//     });
+
+// });
 }
